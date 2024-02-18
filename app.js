@@ -11,6 +11,18 @@ for (const seat of allSeats) {
         const td = document.createElement('td');
         const p = document.createElement('p');
         p.innerText = seatName;
+
+        const p2 = document.createElement('p');
+        p2.innerText = 'Economy';
+
+        const p3 = document.createElement('p');
+        p3.innerText = 550;
+
+        td.appendChild(p);
+        td.appendChild(p2);
+        td.appendChild(p3);
+
+        selectedContainer.appendChild(td);
         
 
         e.target.style.backgroundColor = 'green';
