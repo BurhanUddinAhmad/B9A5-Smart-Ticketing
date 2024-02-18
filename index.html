@@ -35,7 +35,7 @@
         }
     </style>
 </head>
-<body class="font-manrope">
+<body class="font-manrope scroll-smooth">
     <!-- Header section  -->
     <header class="container lg:px-24 mx-auto">
           <!-- Navbar  -->
@@ -63,7 +63,7 @@
               </ul>
             </div>
             <div class="navbar-end">
-              <button class="btn btn-sm bg-[#FF4240] text-white hover:bg-red-600">Bus</button>
+              <button class="btn text-orange-700 font-bold border-orange-300 hover:bg-slate-300">Bus <img src="./images/bus-icon.png" alt=""></button>
             </div>
           </div>
 
@@ -75,7 +75,7 @@
                 <h1 class="mb-5 text-4xl font-bold text-white">End-to-End Travel with</h1>
                 <h1 class="mb-5 text-4xl font-bold text-lime-500">P Paribahan</h1>
                 <p class="mb-5 text-sm">Yes, you can travel safely to your desire destination. Just keep in touch with us. We will make you happy with our services.</p>
-                <button class="btn font-bold bg-lime-500 border-0">Buy Tickets</button>
+                <a href="#phParibahan" class="btn font-bold bg-lime-500 border-0">Buy Tickets</a>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@
             <p class="font-bold">on your next purchase</p>
             <p class="text-red-500 text-sm">use by February 2024</p>
            </div>
-           <div><img src="./images/cupon-devider.png" alt=""></div>
+           <div><img class="h-44" src="./images/cupon-devider.png" alt=""></div>
            <div class="mr-10">
             <h3 class="font-bold text-xl">NEW15</h3>
             <p class="text-red-500 text-sm">Cuopn Code</p>
@@ -108,7 +108,7 @@
             <p class="font-bold">on your next purchase</p>
             <p class="text-red-500 text-sm">use by February 2024</p>
            </div>
-            <div><img src="./images/cupon-devider.png" alt=""></div>
+            <div><img class="h-44" src="./images/cupon-devider.png" alt=""></div>
            <div class="mr-10">
             <h3 class="font-bold text-xl">NEW15</h3>
             <p class="text-red-500 text-sm">Cuopn Code</p>
@@ -116,6 +116,62 @@
           </div>
         </div>
         <button class="btn btn-outline btn-warning">See all offers</button>
+      </section>
+
+      <!-- P. H Paribahan section  -->
+      <section id="phParibahan" class="my-20 py-20 bg-gray-50">
+      <div class="container lg:px-24 mx-auto">
+        <!-- section heading  -->
+        <div class="text-center space-y-4 mb-5">
+          <h2 class="text-4xl font-extrabold">P.H Paribahan</h2>
+          <p class="text-gray-400 leading-7">Yes, you can travel safely to your desire destination. Just keep in touch with us. <br> We will make you happy with our services.</p>
+        </div>
+
+        <!-- Greenline Seats left -->
+        <div class="rounded-lg bg-white px-7 py-5 md:py-0 flex flex-col md:flex-row justify-between items-center gap-5">
+          <!-- left side  -->
+          <div>
+            <div class="flex justify-between items-center gap-5">
+              <div class="flex items-center gap-3">
+               <div><img src="./images/bus-logo.png" alt=""></div>
+               <div>
+                 <h2 class="text-2xl font-extrabold">Greenline Paribahan</h2>
+                 <p class="text-gray-300">Coach-009-WEB ! AC_Business</p>
+               </div>
+              </div>
+              <div class="flex items-center gap-3 font-bold text-green-500 bg-slate-100 p-2 rounded-lg">
+               <img src="./images/seat-green.png" alt="">
+               <span id="seats-left">40</span> <span>Seats left</span>
+              </div>
+             </div>
+   
+             <div class="bg-slate-50 p-5 rounded-lg mt-5 space-y-3">
+               <div class="flex justify-between border-b-2 border-dashed pb-3">
+                 <p class="font-bold text-gray-400">Route</p>
+                 <p class="font-bold">Dhaka - Sylhet</p>
+               </div>
+               <div class="flex justify-between border-b-2 border-dashed pb-3">
+                 <p class="font-bold text-gray-400">Departure Time</p>
+                 <p class="font-bold">9:00 PM</p>
+               </div>
+               <div class="flex justify-between gap-4">
+                 <div class="bg-gray-100 p-2 rounded-lg font-bold text-gray-600">Boarding Point - Laxmipur</div>
+                 <div class="bg-gray-100 p-2 rounded-lg font-bold text-gray-600">Dropping Point - Bogura</div>
+                 <div class="bg-gray-100 p-2 rounded-lg font-bold text-gray-600">Estimated Time - 11 Hours</div>
+               </div>
+             </div>
+          </div>
+
+          <!-- Vartical line  -->
+          <img class="h-72 hidden md:block" src="./images/info-devider.png" alt="">
+          <!-- Right side  -->
+          <div class="mr-10 text-center">
+            <img class="mx-auto" src="./images/fare.png" alt="">
+           <h3 class="font-bold text-xl mt-4">550 Taka</h3>
+           <p class="text-gray-400 font-bold">Per Seat</p>
+          </div>
+         </div>
+      </div>
       </section>
     </main>
 
