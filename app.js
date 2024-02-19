@@ -44,9 +44,6 @@ for (const seat of allSeats) {
    
 }
 
-function setInnerText(id, value) {
-    document.getElementById(id).innerText = value;
-}
 
 function totalCost(id, value) {
     const totalCost = document.getElementById(id).innerText;
@@ -72,12 +69,22 @@ cuoponBtn.addEventListener('click', function(){
           
     if(totalToInteger >= 2200) {
         if(cuoponCode === "NEW15") {
-            // discount
-            const discountElement = document.getElementById('grand-total');
-            const discountAmount = totalToInteger * 0.85;
-            discountElement.innerText = discountAmount;
-        }
+         // 15% discount
+         setInnerText('grand-total', totalToInteger * 0.85);
+         document.getElementById('cuopon-code').classList.add('hidden');
+        } else if(cuoponCode === "COUPLE20") {
+         // 20% discount
+         setInnerText('grand-total', totalToInteger * 0.80);
+         document.getElementById('cuopon-code').classList.add('hidden');
+        } 
+    } else {
+        alert("please select at least 4 seats to get discounts!");
     }
     
 
 });
+
+
+function setInnerText(id, value) {
+    document.getElementById(id).innerText = value;
+}
