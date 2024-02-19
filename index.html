@@ -372,13 +372,13 @@
                 <div class="label">
                   <span class="label-text font-bold">Passenger Name*</span>                  
                 </div>
-                <input type="text" placeholder="Enter your name" class="input input-bordered focus:outline-none w-full" required />                
+                <input id="passenger-name" type="text" placeholder="Enter your name" class="input input-bordered focus:outline-none w-full" required />                
               </label>
               <label class="form-control w-full">
                 <div class="label">
                   <span class="label-text font-bold">Phone Number*</span>                  
                 </div>
-                <input type="number" placeholder="Enter your phone number" class="input input-bordered focus:outline-none w-full" required />                
+                <input id="phone-number" type="number" placeholder="Enter your phone number" class="input input-bordered focus:outline-none w-full" required />                
               </label>
               <label class="form-control w-full">
                 <div class="label">
@@ -386,7 +386,7 @@
                 </div>
                 <input type="email" placeholder="Enter your email id" class="input input-bordered focus:outline-none w-full" required />                
               </label>
-              <button class="btn w-full bg-green-500 hover:bg-green-600 text-white font-bold">Next</button>
+              <a id="next-btn" class="btn w-full bg-green-500 hover:bg-green-600 text-white font-bold">Next</a>
               <div class="text-center">
                 <a href="#" class="link text-gray-500">Terms and conditions</a>
                 <a href="#" class="link text-gray-500 ml-5">Cancellation Policy</a>
@@ -435,5 +435,20 @@
 
     <!-- External JavaScript -->
     <script src="./app.js"></script>
+   
+    <!-- modal  -->
+    <div class="modal" role="dialog" id="my_modal_8">
+      <div class="modal-box">
+        <img class="mx-auto w-20" src="./images/success.png" alt="">
+        <h4 class="uppercase text-green-600 text-center my-5 font-bold">Success</h4>
+        <p class="py-4 font-bold text-center">Thank you for Booking Our Bus Seats. 
+          We are working hard to find the best service and deals for you.</p>
+        <p class="text-center">Shortly you will find a confirmation in your email.</p>
+        <div class="modal-action">
+         <a href="#" class="btn bg-green-700 hover:bg-green-800 text-white rounded-full mx-auto w-44">Continue</a>
+        </div>
+      </div>
+    </div>
+
 </body>
 </html>

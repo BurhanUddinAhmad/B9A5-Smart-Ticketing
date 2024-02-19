@@ -27,10 +27,10 @@ for (const seat of allSeats) {
 
         const totalSeat = document.getElementById('total-seat').innerText;
         if(totalSeat >= 3) {
-            alert("Thanks, you have selected 4 seats. You cannot book more seats!");
             for ( const seat of allSeats) {
                 seat.setAttribute('disabled', true);
             }
+            alert("Thanks, you have selected 4 seats. You cannot book another seats!");
         }
 
 
@@ -41,16 +41,8 @@ for (const seat of allSeats) {
         setInnerText('total-seat', countUp);
         totalCost('total-price', 550);
     });
-   
 }
 
-
-function totalCost(id, value) {
-    const totalCost = document.getElementById(id).innerText;
-    const toInteger = parseInt(totalCost);
-    const sum = toInteger + value;
-    setInnerText(id, sum);
-}
 
 const cuoponInput = document.getElementById('cuopon-input');
 const cuoponBtn = document.getElementById('cuopon-btn');
@@ -80,10 +72,26 @@ cuoponBtn.addEventListener('click', function(){
     } else {
         alert("please select at least 4 seats to get discounts!");
     }
-    
-
 });
 
+const nextBtn = document.getElementById('next-btn');
+nextBtn.addEventListener('click', function(e){
+    const passengerName = document.getElementById('passenger-name');
+    const passengerNumber = document.getElementById('phone-number');
+    if (passengerName.value === '' || passengerNumber.value == '') {
+        alert("Please enter your name & phone number!");
+    } else {
+        e.target.setAttribute("href", "#my_modal_8");
+    }
+});
+
+
+function totalCost(id, value) {
+    const totalCost = document.getElementById(id).innerText;
+    const toInteger = parseInt(totalCost);
+    const sum = toInteger + value;
+    setInnerText(id, sum);
+}
 
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
