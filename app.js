@@ -60,10 +60,14 @@ cuoponBtn.addEventListener('click', function(){
     if(totalToInteger >= 2200) {
         if(cuoponCode === "NEW15") {
          // 15% discount
+         setInnerText('discounts', "Discounts");
+         setInnerText('discount-amount', totalToInteger * 0.15);
          setInnerText('grand-total', totalToInteger * 0.85);
          document.getElementById('cuopon-code').classList.add('hidden');
         } else if(cuoponCode === "COUPLE20") {
          // 20% discount
+         setInnerText('discounts', "Discounts");
+         setInnerText('discount-amount', totalToInteger * 0.20);
          setInnerText('grand-total', totalToInteger * 0.80);
          document.getElementById('cuopon-code').classList.add('hidden');
         } 
