@@ -25,8 +25,13 @@ for (const seat of allSeats) {
         tr.appendChild(td3);
         selectedContainer.appendChild(tr);
 
-        // Total price calculation
-        
+        const totalSeat = document.getElementById('total-seat').innerText;
+        if(totalSeat >= 3) {
+            alert("Thanks, you have selected 4 seats. You cannot book more seats!");
+            for ( const seat of allSeats) {
+                seat.setAttribute('disabled', true);
+            }
+        }
 
 
         e.target.style.backgroundColor = 'green';
@@ -49,3 +54,30 @@ function totalCost(id, value) {
     const sum = toInteger + value;
     setInnerText(id, sum);
 }
+
+const cuoponInput = document.getElementById('cuopon-input');
+const cuoponBtn = document.getElementById('cuopon-btn');
+
+cuoponInput.addEventListener('keyup', function(){
+    if(cuoponInput.value.length >= 2) {
+        cuoponBtn.disabled = false;
+    } 
+});
+
+cuoponBtn.addEventListener('click', function(){
+    const cuoponElement = document.getElementById('cuopon-input').value;
+    const cuoponCode = cuoponElement.split(" ").join("").toUpperCase();
+    const totalCost = document.getElementById('total-price').innerText;
+    const totalToInteger = parseInt(totalCost);
+          
+    if(totalToInteger >= 2200) {
+        if(cuoponCode === "NEW15") {
+            // discount
+            const discountElement = document.getElementById('grand-total');
+            const discountAmount = totalToInteger * 0.85;
+            discountElement.innerText = discountAmount;
+        }
+    }
+    
+
+});
