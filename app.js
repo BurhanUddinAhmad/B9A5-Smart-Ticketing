@@ -8,22 +8,22 @@ for (const seat of allSeats) {
         const seatName = e.target.innerText;
         const selectedContainer = document.getElementById('seat-container-row');
 
-        const td = document.createElement('td');
-        const p = document.createElement('p');
-        p.innerText = seatName;
-
-        const p2 = document.createElement('p');
-        p2.innerText = 'Economy';
-
-        const p3 = document.createElement('p');
-        p3.innerText = 550;
-
-        td.appendChild(p);
-        td.appendChild(p2);
-        td.appendChild(p3);
-
-        selectedContainer.appendChild(td);
+        const tr = document.createElement('tr');
         
+        const td1 = document.createElement('td');
+        td1.innerText = seatName;
+        tr.appendChild(td1);
+
+        const td2 = document.createElement('td');
+        td2.innerText = 'Economy';
+        tr.appendChild(td2);
+
+        const td3 = document.createElement('td');
+        td3.innerText = 550;
+        tr.appendChild(td3);
+
+        selectedContainer.appendChild(tr);
+
 
         e.target.style.backgroundColor = 'green';
         e.target.style.color = 'white';
