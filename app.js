@@ -1,9 +1,11 @@
 let count = 40;
+let countUp = 0;
 const allSeats = document.getElementsByClassName('seat');
 
 for (const seat of allSeats) {
     seat.addEventListener('click', function(e) {
         count--;
+        countUp++;
 
         const seatName = e.target.innerText;
         const selectedContainer = document.getElementById('seat-container-row');
@@ -29,6 +31,7 @@ for (const seat of allSeats) {
         e.target.style.color = 'white';
         e.target.setAttribute("disabled", true);
         setInnerText('seats-left', count);
+        setInnerText('total-seat', countUp);
     });
    
 }
