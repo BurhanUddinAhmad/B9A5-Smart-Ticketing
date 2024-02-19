@@ -33,7 +33,6 @@ for (const seat of allSeats) {
             alert("Thanks, you have selected 4 seats. You cannot book another seats!");
         }
 
-
         e.target.style.backgroundColor = 'green';
         e.target.style.color = 'white';
         e.target.setAttribute("disabled", true);
@@ -42,7 +41,6 @@ for (const seat of allSeats) {
         totalCost('total-price', 550);
     });
 }
-
 
 const cuoponInput = document.getElementById('cuopon-input');
 const cuoponBtn = document.getElementById('cuopon-btn');
@@ -84,7 +82,6 @@ nextBtn.addEventListener('click', function(e){
         e.target.setAttribute("href", "#my_modal_8");
     }
 });
-
 
 function totalCost(id, value) {
     const totalCost = document.getElementById(id).innerText;
