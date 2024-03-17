@@ -4,6 +4,12 @@ const allSeats = document.getElementsByClassName('seat');
 
 for (const seat of allSeats) {
     seat.addEventListener('click', function(e) {
+        const totalSeat = document.getElementById('total-seat').innerText;
+        if(totalSeat == 4) {
+            alert("Sorry, you have selected 4 seats. You cannot book another seats!");
+            return;
+        }
+
         countDown--;
         countUp++;
 
@@ -25,13 +31,6 @@ for (const seat of allSeats) {
         tr.appendChild(td3);
         selectedContainer.appendChild(tr);
 
-        const totalSeat = document.getElementById('total-seat').innerText;
-        if(totalSeat >= 3) {
-            for ( const seat of allSeats) {
-                seat.setAttribute('disabled', true);
-            }
-            alert("Thanks, you have selected 4 seats. You cannot book another seats!");
-        }
 
         e.target.style.backgroundColor = 'green';
         e.target.style.color = 'white';
